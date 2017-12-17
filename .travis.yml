@@ -11,6 +11,6 @@ sudo: required
 services:
 - docker
 script:
-- docker login -u michielvh -p school
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - mvn clean package docker:build
 - docker push michielvh/darepo:latest
